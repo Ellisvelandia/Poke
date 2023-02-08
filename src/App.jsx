@@ -1,8 +1,18 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
+import { Pokemons } from "./pages";
 
 const App = () => {
-  return <div>App</div>;
+  return (
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Pokemons />} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
 };
 
 export default App;
